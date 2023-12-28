@@ -141,7 +141,7 @@ function evaluateRequirement(requirement, value) {
  // Function to get latitude and longitude for a given ZIP code using Zippopotamus API
 async function getCoordinatesForZip(zipCode) {
   try {
-    const response = await fetch(`http://api.zippopotam.us/us/${zipCode}`);
+    const response = await fetch(`https://api.zippopotam.us/us/${zipCode}`);
     const data = await response.json();
 
     if (response.ok) {
