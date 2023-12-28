@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Information</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation bar -->
+<ul class="navbar">
+  <div class="header">
+    <img src="eyeball.png" alt="eyeball">
+    <li><a href="#home">Home</a></li>
+  </div>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<!-- Home section -->
+<div id="home" class="content">
+  <h1>User Information</h1>
+  <form id="userInfoForm">
+    <label for="nameInput">Type the patients age:</label>
+    <input type="number" id="ageInput" name="ageInput" required><br>
+    <div id="ageError" style="color: red; display: none;">Please enter the patient's valid age.</div><br>
+
+    <label for="medical">Does the patient have MediCal?</label>
+    <div>
+      <input type="radio" id="medicalYes" name="medical" value="yes">
+      <label for="medicalYes">Yes</label>
+    </div>
+    <div>
+      <input type="radio" id="medicalNo" name="medical" value="no">
+      <label for="medicalNo">No</label>
+    </div>
+    <br><br>
+
+    <label for="usCitizen">Is the patient a US citizen?</label>
+    <div>
+      <input type="radio" id="usCitizenYes" name="usCitizen" value="yes">
+      <label for="usCitizenYes">Yes</label>
+    </div>
+    <div>
+      <input type="radio" id="usCitizenNo" name="usCitizen" value="no">
+      <label for="usCitizenNo">No</label>
+    </div>
+    <br><br>
+
+    <label for="zipCodeInput">Enter the patient's ZIP code:</label>
+    <input type="text" id="zipCodeInput" name="zipCodeInput" pattern="[0-9]{5}" title="Enter a 5-digit ZIP code" required><br>
+    <div id="zipCodeError" style="color: red; display: none;">Please enter the patient's valid ZIP code.</div><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="siteResult"></div>
+
+  <div id="nextSteps" style="display: none;">
+    <h2>Matching Sites and Next Steps:</h2>
+    <div id="siteNextSteps"></div>
+  </div>
+</div>
+
+<!-- About section -->
+<div id="about" class="content" style="display: none;">
+  <h1>About</h1>
+  <p>This is the about section. You can place any information about your website or application here.</p>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

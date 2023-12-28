@@ -1,0 +1,39 @@
+.header img {
+  float: left;
+  width: 50px;
+  height: 40px;
+}
+
+.header li {
+  position: relative;
+}
+
+    /* Style for the navigation bar */
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 10px;
+      background-color: #f2f2f2;
+      overflow: hidden;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover {
+      background-color: #ddd;
+    }
+
+    /* Style for page content */
+    .content {
+      padding: 20px;
+    }
