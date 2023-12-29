@@ -9,10 +9,7 @@
 
 <!-- Navigation bar -->
 <ul class="navbar">
-  <div class="header">
-    <img src="eyeball.png" alt="eyeball">
-    <li><a href="#home">Home</a></li>
-  </div>
+  <li><a href="#home">Home</a></li>
   <li><a href="#about">About</a></li>
 </ul>
 
@@ -20,20 +17,29 @@
 <div id="home" class="content">
   <h1>User Information</h1>
   <form id="userInfoForm">
-    <label for="nameInput">Type the patients age:</label>
-    <input type="number" id="ageInput" name="ageInput" required><br>
-    <div id="ageError" style="color: red; display: none;">Please enter the patient's valid age.</div><br>
+  <label for="cataractDiagnosis">Does the patient have a formal diagnosis of a cataract from an ophthalmologist?</label>
+  <div>
+    <input type="radio" id="cataractYes" name="cataractDiagnosis" value="yes">
+    <label for="cataractYes">Yes</label>
+  </div>
+  <div>
+    <input type="radio" id="cataractNo" name="cataractDiagnosis" value="no">
+    <label for="cataractNo">No</label>
+  </div>
+  <br><br>
 
-    <label for="medical">Does the patient have MediCal?</label>
-    <div>
-      <input type="radio" id="medicalYes" name="medical" value="yes">
-      <label for="medicalYes">Yes</label>
-    </div>
-    <div>
-      <input type="radio" id="medicalNo" name="medical" value="no">
-      <label for="medicalNo">No</label>
-    </div>
-    <br><br>
+  <label for="nameInput">Type the patients age:</label>
+  <input type="number" id="ageInput" name="ageInput" required><br>
+  <div id="ageError" style="color: red; display: none;">Please enter the patient's valid age.</div><br>
+
+  <label for="insuranceType">Does the patient have insurance?</label>
+  <select id="insuranceType" name="insuranceType">
+    <option value="MediCal">Medi-Cal or Medicaid</option>
+    <option value="Medicare">Medicare</option>
+    <option value="thirdParty">3rd Party Insurance</option>
+    <option value="noInsurance">No Insurance</option>
+</select>
+<br><br>
 
     <label for="usCitizen">Is the patient a US citizen?</label>
     <div>
@@ -49,6 +55,16 @@
     <label for="zipCodeInput">Enter the patient's ZIP code:</label>
     <input type="text" id="zipCodeInput" name="zipCodeInput" pattern="[0-9]{5}" title="Enter a 5-digit ZIP code" required><br>
     <div id="zipCodeError" style="color: red; display: none;">Please enter the patient's valid ZIP code.</div><br>
+
+    <label for="radiusPreference">Radius:</label>
+  <select id="radiusPreference" name="radiusPreference">
+    <option value="10">10 miles</option>
+    <option value="20">20 miles</option>
+    <option value="50">50 miles</option>
+    <option value="100">100 miles</option>
+    <option value="noPreference">No preference</option>
+  </select>
+  <br><br>
 
     <input type="submit" value="Submit">
   </form>
@@ -67,6 +83,6 @@
   <p>This is the about section. You can place any information about your website or application here.</p>
 </div>
 
-<script src="scripts.js"></script>
+<script src="scripts1.js"></script>
 </body>
 </html>
