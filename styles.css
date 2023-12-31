@@ -1,17 +1,15 @@
-/* Resetting default margins and paddings */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+h1 {
+  text-align: center;
 }
 
-/* Body styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #333;
-  margin: 0;
+h3 {
+  text-align: center;
+}
+
+#errorMessage {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
 }
 
 /* Navigation bar styles */
@@ -20,82 +18,215 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: #8C1515; /* Cardinal Red background */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar li {
   float: left;
+  font-size: 20px;
+  flex: 1; /* Distribute the list items evenly */
 }
 
 .navbar li a {
   display: block;
-  color: #333;
+  color: #FFFFFF; /* White text */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 .navbar li a:hover {
-  background-color: #ddd;
+  background-color: #440a0a; /* Darkened Cardinal Red on hover */
+}
+
+/* Styles for the submit button container */
+.submit-button-container {
+  display: flex;
+  justify-content: center;
 }
 
 /* Form and Content styles */
-.content {
-  padding: 20px;
-}
-
-form label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-form input[type="number"],
-form input[type="text"],
-form select {
-  width: calc(100% - 12px);
-  padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
 form input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
+  background-color: #8C1515; /* Cardinal Red button */
+  color: #FFFFFF; /* White text */
+  padding: 15px 25px; /* Increased button padding */
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px; /* Increased font size */
 }
 
 form input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #440a0a; /* Darkened Cardinal Red on hover */
 }
 
 /* Error message styles */
 .error-message {
-  color: red;
-  margin-top: 5px;
-  display: none;
+  color: #8C1515; /* Cardinal Red for error messages */
+  display: block;
 }
 
-/* Result and Next Steps styles */
-.result {
-  margin-top: 20px;
+/* Style for the parent table */
+.input-table {
+  width: 100%;
+  border-collapse: collapse;
+  width: 700px; /* Set maximum width */
+  margin: 0 auto; /* Auto margin horizontally centers the table */
 }
 
-.result h2 {
+/* Style for table cells (td) */
+td {
+  padding: 10px; /* Adjust padding */
+}
+
+/* Container styles */
+.radio-container {
+  display: flex;
+  align-items: center; /* Center align radio buttons */
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Styling for the labels */
+.radio-label {
+  font-size: 18px;
+  flex: 1;
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styling for 'Yes' and 'No' labels */
+#cataractYes:checked + .radio-label,
+#usCitizenYes:checked + .radio-label {
+  font-size: 18px;
+  background-color: #8C1515;
+  color: #FFFFFF;
+}
+
+/* Styling for 'No' labels */
+#cataractNo:checked + .radio-label,
+#usCitizenNo:checked + .radio-label {
+  font-size: 18px;
+  background-color: #8C1515;
+  color: #FFFFFF;
+}
+
+/* Cardinal Red border radius for unchecked 'Yes' label */
+#cataractYes:not(:checked) + .radio-label,
+#usCitizenYes:not(:checked) + .radio-label {
+  border-right: 1px solid #ccc;
+}
+
+/* Hover effect */
+.radio-label:hover {
+  background-color: #F2F2F2; /* Light gray on hover */
+}
+
+/* First and Last Label Border Radius */
+#cataractYes + .radio-label {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+#usCitizenNo + .radio-label {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* Improved focus styles for input fields */
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #8C1515; /* Cardinal Red border on focus */
+  box-shadow: 0 0 5px rgba(140, 21, 21, 0.5); /* Cardinal Red shadow on focus */
+}
+
+/* Adjusted margins and spacing */
+label {
   font-size: 20px;
-  margin-bottom: 10px;
+  color: black;
 }
 
-.result ul {
-  list-style: none;
-  padding: 0;
+/* Adjusted input size with maximum width */
+input[type="number"],
+input[type="text"],
+select {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%; /* Set width to 100% */
+  max-width: 700px; /* Set maximum width to 400px */
+  box-sizing: border-box; /* Include padding and border in the width */
 }
 
-.result ul li {
-  margin-bottom: 8px;
+.radio-container input[type="radio"] {
+  display: none; /* Hide the default radio buttons */
+}
+
+/* Table layout for inputs */
+.input-table {
+  width: 700px; /* Set maximum width */
+  border-collapse: collapse;
+}
+
+.input-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc; /* Horizontal line between rows */
+}
+
+/* Age input */
+.age-input {
+  display: flex;
+}
+
+.age-input input[type="number"] {
+  width: 60%; /* Example width */
+  border: 1px solid #ccc;
+  border-right: 0px;
+  border-radius: 6px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  /* Add any other styles as needed */
+}
+
+.unit-box {
+  color: #FFFFFF;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  background-color: #8C1515;
+  width: 40%; /* Set width to 100% */
+  max-width: 700px; /* Set maximum width to 400px */
+  box-sizing: border-box; /* Include padding and border in the width */
+  border-radius: 6px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+/* Style for select elements */
+select {
+  padding: 12px; /* Adjust the padding */
+  font-size: 18px; /* Adjust the font size */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 6px; /* Border radius */
+  background-color: #FFFFFF; /* Background color */
+  color: #333; /* Text color */
+  height: 50px;
+}
+
+/* Style for the parent td elements */
+td {
+  padding: 12px; /* Adjust padding */
+  border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+.content {
+  align-items: center;
 }
