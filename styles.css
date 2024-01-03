@@ -6,12 +6,6 @@ h3 {
   text-align: center;
 }
 
-#errorMessage {
-  margin-top: 10px;
-  font-size: 18px;
-  text-align: center;
-}
-
 /* Navigation bar styles */
 .navbar {
   list-style-type: none;
@@ -229,4 +223,196 @@ td {
 
 .content {
   align-items: center;
+}
+
+/* Style for the background overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+/* Style for the pop-up container */
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1100;
+  display: none; /* Initially hidden */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  max-height: 80%; /* Set a maximum height for the pop-up */
+}
+
+.close-button {
+  /* Add styles for the close button appearance */
+  cursor: pointer;
+  font-size: 30px;
+  position: fixed;
+  top: 10px;
+  right: 20px; /* Adjust the right position */
+  font-weight: 100;
+  font-family: arial;
+}
+
+.close-button:hover {
+  color: #ccc;
+}
+
+
+/* Additional styles for the drop-down toggle and content */
+.popup-content p {
+  margin-bottom: 5px; /* Adjust as needed */
+  font-size: 16px; /* Adjust as needed */
+}
+
+/* Button Styles */
+.popup-content button {
+  background-color: #8C1515; /* Cardinal Red button */
+  color: #FFFFFF; /* White text */
+  padding: 10px 20px; /* Adjust padding */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size */
+  margin-bottom: 10px; /* Adjust margin */
+}
+
+.popup-content button:hover {
+  background-color: #440a0a; /* Darkened Cardinal Red on hover */
+}
+
+/* Style for the list */
+.popup-content ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style for list items */
+.popup-content li {
+  margin-bottom: 20px;
+}
+
+/* Adjusted site name style */
+.popup-content p.site-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+/* Adjusted distance style */
+.popup-content p.distance {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Adjusted 'Next Steps' heading style */
+.popup-content p.next-steps {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Hide Next Steps by default */
+.hidden {
+  display: none;
+}
+
+.gray-line {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px; /* Adjust as needed */
+  margin-top: 10px; /* Adjust as needed */
+  width: 100%; /* Adjust as needed */
+}
+
+/* Dropdown Styles */
+.dropdowns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-btn1 {
+  background-color: white;
+  color: black;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 18px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 50%;
+  width: 350px;
+}
+
+.dropdown-btn2 {
+  background-color: white;
+  color: black;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-left: 0;
+  cursor: pointer;
+  font-size: 18px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  width: 50%;
+  width: 350px;
+}
+
+.dropdown-btn1:hover {
+  background-color: #8C1515; /* Cardinal Red button */
+  color: #FFFFFF; /* White text */
+}
+
+.dropdown-btn2:hover {
+  background-color: #8C1515; /* Cardinal Red button */
+  color: #FFFFFF; /* White text */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 700px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 2px 0;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.dropdown-content ul li {
+  padding: 4px 16px;
+}
+
+.dropdown1:hover .dropdown-content {
+  display: block;
+  width: 700px;
+}
+
+.dropdown2:hover .dropdown-content {
+  display: block;
+  width: 700px;
+}
+
+.dropdown-arrow {
+  padding-left: 10px;
+  float: right;
+}
+
+.dropdown2 .dropdown-content {
+  position: absolute;
+  top: 28.4%; /* Adjust this value as needed to position it below */
+  left: 23.55%;
+  display: none;
+  /* Other styles for the dropdown content */
 }
