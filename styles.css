@@ -408,11 +408,3 @@ td {
   padding-left: 10px;
   float: right;
 }
-
-.dropdown2 .dropdown-content {
-  position: absolute;
-  top: 28.4%; /* Adjust this value as needed to position it below */
-  left: 23.55%;
-  display: none;
-  /* Other styles for the dropdown content */
-}
