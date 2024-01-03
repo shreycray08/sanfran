@@ -16,7 +16,28 @@
 <!-- Home section -->
 <div id="home" class="content">
   <h1>Cataract Matching Tool</h1>
-  <br>
+  <br><div class="dropdowns">
+      <div class="dropdown1">
+        <button onclick="toggleDropdown('whyUseDropdown')" class="dropdown-btn1">
+          Why use? <span class="dropdown-arrow">&#9662;</span>
+        </button>
+        <div id="whyUseDropdown" class="dropdown-content">
+          <ul>
+          <li>Type information about why to use</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdown2">
+        <button onclick="toggleDropdown('whenToUseDropdown')" class="dropdown-btn2">
+          When to use? <span class="dropdown-arrow">&#9662;</span>
+        </button>
+        <div id="whenToUseDropdown" class="dropdown-content">
+          <ul>
+          <li>Type information about when to use</li>
+          </ul>
+        </div>
+      </div>
+    </div><br>
   <h3>Please enter patient information</h3>
   <form id="userInfoForm">
   <table class="input-table">
