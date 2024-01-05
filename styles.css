@@ -342,12 +342,26 @@ td {
   position: relative;
 }
 
-.dropdown-btn1,
+.dropdown-btn1 {
+  background-color: white;
+  color: black;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 350px;
+}
+
 .dropdown-btn2 {
   background-color: white;
   color: black;
   padding: 14px 16px;
   border: 1px solid #ccc;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: 0px;
   cursor: pointer;
   font-size: 18px;
   width: 350px;
