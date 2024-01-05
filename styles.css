@@ -1,3 +1,28 @@
+body {
+  font-family: 'Times New Roman', sans-serif;
+}
+
+h1,
+h3,
+.navbar li,
+.navbar li a,
+form input[type="submit"],
+.error-message,
+.radio-label,
+#cataractYes:checked + .radio-label,
+#usCitizenYes:checked + .radio-label,
+#cataractNo:checked + .radio-label,
+#usCitizenNo:checked + .radio-label,
+label,
+input[type="number"],
+input[type="text"],
+select,
+.input-table td,
+.popup-content p,
+.popup-content button {
+  font-family: 'Times New Roman', sans-serif;
+}
+
 h1 {
   text-align: center;
 }
@@ -352,6 +377,7 @@ td {
   cursor: pointer;
   font-size: 18px;
   width: 350px;
+  font-family: 'Times New Roman', sans-serif;
 }
 
 .dropdown-btn2 {
@@ -365,6 +391,7 @@ td {
   cursor: pointer;
   font-size: 18px;
   width: 350px;
+  font-family: 'Times New Roman', sans-serif;
 }
 
 .dropdown-btn1:hover {
